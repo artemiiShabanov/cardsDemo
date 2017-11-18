@@ -13,6 +13,10 @@
 		08E25BA81F9B62AA0080C6EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08E25BA71F9B62AA0080C6EE /* Assets.xcassets */; };
 		08E25BAB1F9B62AA0080C6EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08E25BA91F9B62AA0080C6EE /* LaunchScreen.storyboard */; };
 		6844476F61BF3D5C7611DDA8 /* Pods_RealmTemplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 526FC93E00DBF7961631B8CE /* Pods_RealmTemplate.framework */; };
+		AE0A491D1FC06CEB000604C9 /* WordsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0A491C1FC06CEB000604C9 /* WordsTableViewController.swift */; };
+		AE6C80711F9B711B006236B7 /* WordTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6C80701F9B711B006236B7 /* WordTableCell.swift */; };
+		AE6C80751F9B75B5006236B7 /* WordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6C80741F9B75B5006236B7 /* WordModel.swift */; };
+		AE6C80771F9B7764006236B7 /* AddToDoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6C80761F9B7764006236B7 /* AddToDoController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +29,10 @@
 		08E25BAC1F9B62AA0080C6EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		526FC93E00DBF7961631B8CE /* Pods_RealmTemplate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RealmTemplate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		56573BA9015736CD29FAE0C8 /* Pods-RealmTemplate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmTemplate.release.xcconfig"; path = "Pods/Target Support Files/Pods-RealmTemplate/Pods-RealmTemplate.release.xcconfig"; sourceTree = "<group>"; };
+		AE0A491C1FC06CEB000604C9 /* WordsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsTableViewController.swift; sourceTree = "<group>"; };
+		AE6C80701F9B711B006236B7 /* WordTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordTableCell.swift; sourceTree = "<group>"; };
+		AE6C80741F9B75B5006236B7 /* WordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordModel.swift; sourceTree = "<group>"; };
+		AE6C80761F9B7764006236B7 /* AddToDoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToDoController.swift; sourceTree = "<group>"; };
 		B703138685283B1F4B1ED5AA /* Pods-RealmTemplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmTemplate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RealmTemplate/Pods-RealmTemplate.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,6 +84,10 @@
 				08E25BA71F9B62AA0080C6EE /* Assets.xcassets */,
 				08E25BA91F9B62AA0080C6EE /* LaunchScreen.storyboard */,
 				08E25BAC1F9B62AA0080C6EE /* Info.plist */,
+				AE6C80701F9B711B006236B7 /* WordTableCell.swift */,
+				AE6C80741F9B75B5006236B7 /* WordModel.swift */,
+				AE6C80761F9B7764006236B7 /* AddToDoController.swift */,
+				AE0A491C1FC06CEB000604C9 /* WordsTableViewController.swift */,
 			);
 			path = RealmTemplate;
 			sourceTree = "<group>";
@@ -211,7 +223,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE6C80771F9B7764006236B7 /* AddToDoController.swift in Sources */,
+				AE6C80711F9B711B006236B7 /* WordTableCell.swift in Sources */,
 				08E25BA31F9B62AA0080C6EE /* ViewController.swift in Sources */,
+				AE6C80751F9B75B5006236B7 /* WordModel.swift in Sources */,
+				AE0A491D1FC06CEB000604C9 /* WordsTableViewController.swift in Sources */,
 				08E25BA11F9B62AA0080C6EE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
