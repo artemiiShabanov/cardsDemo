@@ -1,35 +1,30 @@
 //
-//  AddToDoController.swift
-//  RealmTemplate
+//  AddWordController.swift
+//  CardDemo
 //
-//  Created by xcode on 21.10.2017.
-//  Copyright © 2017 Andrey Volodin. All rights reserved.
+//  Created by xcode on 20.11.2017.
+//  Copyright © 2017 VSU. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
-class AddToDoController: UIViewController {
-    @IBOutlet weak var nameIF: UITextField!
-    @IBOutlet weak var detailsIF: UITextField!
+class AddWordController: UIViewController {
     
-    @IBAction func donePressed(_ sender: Any) {
-        guard nameIF.text != "" else {
-            let alert = UIAlertController(title: "ToDo must have a name", message: "Please enter a valid ToDo Name", preferredStyle: .alert)
-            let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-            alert.addAction(alertAction)
-            self.present(alert, animated: true, completion: nil)
-            return
-        }
+    @IBOutlet weak var definitionField: UITextView!
+    @IBOutlet weak var wordField: UITextField!
+    
+    @IBAction func AddWord(_ sender: Any) {
         
-        let todo = Todo()
-        todo.name = nameIF.text!
-        todo.details = detailsIF.text!
-        todo.finished = false
+        let word = Word()
+        word.word = wordField.text!
+        word.defenition = definitionField.text!
         
         try! realm.write {
-            realm.add(todo)
+            realm.add(word)
         }
         
-        _ = self.navigationController?.popViewController(animated: true)
+        self.dismiss(animated: true, completion: nil)
     }
 }
+

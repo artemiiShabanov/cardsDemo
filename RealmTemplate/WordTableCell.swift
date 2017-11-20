@@ -10,7 +10,7 @@ import UIKit
 
 class WordTableCell: UITableViewCell{
     
-    public static let reuseId = "ToDoTableCell_reuseId"
+    public static let reuseId = "WordTableCell_reuseId"
     @IBOutlet weak var NameLabel: UILabel!
     
     public func configure(word:String) {
