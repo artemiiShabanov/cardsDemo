@@ -10,16 +10,15 @@ import UIKit
 
 class WordTableCell: UITableViewCell{
     
+    @IBOutlet weak var WordLabel: UILabel!
     public static let reuseId = "WordTableCell_reuseId"
-    @IBOutlet weak var NameLabel: UILabel!
     
     public func configure(word:String) {
-        NameLabel.text = word
+        WordLabel.text = word
     }
     
     public func setColor(color: UIColor) {
         self.backgroundColor = color
     }
-    
     
 }

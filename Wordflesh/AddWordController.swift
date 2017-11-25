@@ -10,11 +10,8 @@ import Foundation
 import UIKit
 
 class AddWordController: UIViewController {
-    
-    @IBOutlet weak var definitionField: UITextView!
-    @IBOutlet weak var wordField: UITextField!
-    
-    @IBAction func AddWord(_ sender: Any) {
+  
+    @IBAction func add(_ sender: Any) {
         
         let word = Word()
         word.word = wordField.text!
@@ -26,5 +23,8 @@ class AddWordController: UIViewController {
         
         self.dismiss(animated: true, completion: nil)
     }
+    @IBOutlet weak var definitionField: UITextView!
+    @IBOutlet weak var wordField: UITextField!
+    
 }
 

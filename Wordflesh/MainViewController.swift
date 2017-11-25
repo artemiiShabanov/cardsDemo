@@ -13,44 +13,48 @@ import RealmSwift
 var realm:Realm = try! Realm()
 
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
     
     var words:Results<Word>!
+    var state:State?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         words = realm.objects(Word.self).filter(NSPredicate(format: "isInHistory == false"))
-        //favorite = realm.objects(Word.self).filter(NSPredicate(format: "isFavorite == true"))
-        //tableView.reloadData()
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func addWord(_ sender: Any) {
-        self.performSegue(withIdentifier: "AddWordSegue", sender: self)
+        let word = Word()
+        word.word = "a"
+        word.defenition = "fghj"
+        word.isFavorite = true
+        try! realm.write{
+            realm.add(word)
+        }
+        //self.performSegue(withIdentifier: "AddWordSegue", sender: self)
     }
     
     @IBAction func showFavorite(_ sender: Any) {
-        self.performSegue(withIdentifier: "TableSegue", sender: self)
+        state = .Favorite
+        self.performSegue(withIdentifier: "tableSegue", sender: self)
     }
     @IBAction func showHistory(_ sender: Any) {
-        self.performSegue(withIdentifier: "TableSegue", sender: self)
+        state = .History
+        self.performSegue(withIdentifier: "tableSegue", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     /*guard let destination = segue.destination as? WordsTableViewController
-     else {fatalError("Some Error")}*/
-     
-     //destination.text = posts[currentRow].body
-     //destination.id = posts[currentRow].id
-     
-     }
+        guard let destination = segue.destination as? WordsTableViewController
+            else {fatalError("Some Error")}
+        destination.state = state
+    }
     
 }
